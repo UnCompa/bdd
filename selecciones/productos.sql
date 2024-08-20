@@ -19,8 +19,15 @@
 -- Solo con parametros requeridos
 
 insert into productos(codigo,nombre,precio,stock)
-values(19372,'Quazar',22.12,1),
+values(20492,'Tomate',2.0,1),
 (88888,'Jabon',11.99,2),
 (99999,'Consola',999.99,5);
-
-select * from productos;
+-- Productos que empiezan con la letra Q
+select * from productos
+where nombre like 'Q%';
+-- Descripciones que sea nulas
+select * from productos
+where descripcion is null;
+-- Precios que esten entre 2 y 3
+select * from productos
+where precio between '2' and '3';
